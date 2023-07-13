@@ -1,0 +1,13 @@
+def merge(string,k):
+    for i in range(0,len(string),k):
+        curr = ""
+        set_ = set()
+        for j in range(i,i+k):
+            pick = string[j]
+            if pick not in set_:
+                curr += pick
+                set_.add(pick)
+        print(curr)
+
+
+print(merge("AABCAAADA",3))
